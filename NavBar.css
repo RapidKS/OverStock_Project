@@ -62,15 +62,7 @@
     font-size: 14px;
     color: #2f3337;
 }
-path{
-    d: path("M 2 7 l 10 10 L 22 7");
-    stroke: inherit;
-    fill: none;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
+
 .header_navbar{
     position: relative;
 }
