@@ -66,6 +66,8 @@
 
 .header_navbar{
     position: relative;
+    z-index: 3;
+    background-color: white;
 }
 .header_divider{
     background-color: #fff;
@@ -180,7 +182,7 @@
     width: 100%;
     height: auto;
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
     z-index: 2;
 }
@@ -203,3 +205,8 @@
     flex-wrap: wrap;
     width: 100%;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }

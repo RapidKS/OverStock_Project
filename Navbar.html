@@ -31,7 +31,7 @@
         </div>
         
     </div>
-    <div class = "header_navbar">
+    <div class = "header_navbar" id="myHeader">
         <div class="header_divider"></div>
         <div class="search_header">
             <a class="overstock_logo" href="file:///E:/Masai%20Project/OverStock_Project/Navbar.html"><img src="https://th.bing.com/th?id=OIP.ZFPmAcPcNvdDz6KUkRvVTAHaBR&w=361&h=62&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="overstock"></a>
@@ -179,6 +179,19 @@
     
     
 </body>
-<script src="NavBar.js"></script>
+<script src="NavBar.js">
+    window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 </html>
 
