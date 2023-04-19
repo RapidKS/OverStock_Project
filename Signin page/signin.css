@@ -6,7 +6,7 @@ body{
     backdrop-filter: blur(15px);
     width: 40%;
     position: absolute;
-    display: flex;
+    display: block;
     justify-content: center;
     border: 2px solid rgba(255, 255, 255, 0.5);
     top: 30%;
@@ -55,4 +55,11 @@ body{
     align-items: center;
     justify-content: left;
  }
+ .divider{
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid white;
+}
  
