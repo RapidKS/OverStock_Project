@@ -14,15 +14,16 @@
       }
      #box > div{
         border: 1px solid red;
+        width: 20%;
      }
      form{
         display: flex;
         flex-direction: column;
      }
      input{
-        
+      margin-bottom: 30px;
+      padding: 10px;
      }
-
      
   </style>
 </head>
@@ -33,6 +34,7 @@
     <h1>Create Account</h1>
     <form>
       <input type="text" placeholder="Email" id="email">
+      <span id="email-exists" style="display:none;color:red;">The email id provided is already existing, please sign-in and enjoy shopping</span>
       <input type="password" placeholder="Password" id="password">
       <input type="submit" value="Submit" />
     </form>
@@ -41,8 +43,10 @@
   <div id="signin">
     <h1 id="heading">Sign In</h1>
     <form>
-      <input type="email" id="email1" />
-      <input type="password" id="password1" />
+      <input type="email" id="email1" required />
+      <span id="email-error" style="display:none;color:red;">Please enter a valid email address.</span>
+      <input type="password" id="password1" required />
+      <span id="password-error" style="display:none;color:red;">Email and/or password incorrect. Please try again or reset your password.</span>
       <input type="submit" value="Submit" />
     </form>
   </div>
@@ -51,15 +55,31 @@
 <script>
   document.querySelector("form").addEventListener("submit", getInfo);
   var dataArr = JSON.parse(localStorage.getItem("account-data")) || [];
-  function getInfo(){
+  function getInfo() {
   event.preventDefault();
   var email = document.querySelector("#email").value;
   var password = document.querySelector("#password").value;
-  var dataObj = {email:email, password:password};
+  
+  // Check if email and password fields are empty
+  if (!email || !password) {
+    alert("Email and password fields cannot be empty");
+    return;
+  }
+  
+  var dataObj = { email: email, password: password };
+  
+  // Check if email already exists
+  if (dataArr.some(function(ele) { return ele.email === email })) {
+    document.querySelector("#email-exists").style.display = "inline";
+    return;
+  } else {
+    document.querySelector("#email-exists").style.display = "none";
+  }
+
   dataArr.push(dataObj);
   localStorage.setItem("account-data", JSON.stringify(dataArr));
-  
-  }
+}
+
 
   var dataArr = JSON.parse(localStorage.getItem("account-data")) || [];
 document.querySelector("#signin form").addEventListener("submit", signInFun);
@@ -69,6 +89,15 @@ function signInFun(event) {
   var email = document.querySelector("#email1").value;
   var password = document.querySelector("#password1").value;
   var found = false;
+
+  // Check if email is valid
+  if (!isValidEmail(email)) {
+    document.querySelector("#email-error").style.display = "inline";
+    return;
+  } else {
+    document.querySelector("#email-error").style.display = "none";
+  }
+
   dataArr.map(function(ele){ 
     if (ele.email === email && ele.password === password) {
       found = true;
@@ -78,13 +107,16 @@ function signInFun(event) {
   if (found) {
    alert("Sign in Successful");
   } else {
-   alert("Wrong Credentials");
+   document.querySelector("#password-error").style.display = "inline";
   }
 }
 
+function isValidEmail(email) {
+  var emailRegex = /^\S+@\S+\.\S+$/;
+  return emailRegex.test(email);
+}
 
-  
-  
+
 
 </script>
 
