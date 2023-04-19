@@ -4,18 +4,22 @@ body{
 #box{
     background-color: transparent;
     backdrop-filter: blur(15px);
-    width: 50%;
+    width: 40%;
     position: absolute;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    top: 25%;
-    left: 25%;
-    
-    
+    top: 30%;
+    left: 30%; 
+  }
+  #innerbox{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
   }
  .box-div1{
-    width: 30%;
+    width: 45%;
     border: none;
    
  }
@@ -51,3 +55,4 @@ body{
     align-items: center;
     justify-content: left;
  }
+ 

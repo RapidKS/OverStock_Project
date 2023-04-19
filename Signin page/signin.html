@@ -12,35 +12,37 @@
 
 <body>
   <div id="box">
-  <div id="signup" class="box-div1">
-    <div class="box-div2">
-      <i class="fa-solid fa-user-plus"></i>
-      <h3 class="head">Create Account</h3>
+    <div id="innerbox">
+      <div id="signup" class="box-div1">
+        <div class="box-div2">
+          <i class="fa-solid fa-user-plus"></i>
+          <h3 class="head">Create Account</h3>
+        </div>
+        <form>
+          <input type="text" placeholder="Email" id="email" class="input-box">
+          <span id="email-exists" style="display:none;color:red;">The email id provided is already existing, please sign-in and enjoy shopping</span>
+          <input type="password" placeholder="Password" id="password"class="input-box">
+          <input class="Create" type="submit" value="Create Account" />
+        </form>
+        <div id="account-created" style="display:none;color:green;">Account created successfully!
+        </div>
+        
+      </div>
+    
+      <div id="signin" class="box-div1">
+        <div class="box-div2">
+          <i class="fa-solid fa-user-check"></i>
+          <h3 class="head" id="heading">Sign In</h3>
+        </div>
+        <form>
+          <input class="input-box" type="email" placeholder="Email" id="email1" required />
+          <span id="email-error" style="display:none;color:red;">Please enter a valid email address.</span>
+          <input class="input-box" placeholder="Password" type="password" id="password1" required />
+          <span id="password-error" style="display:none;color:red;">Email and/or password incorrect. Please try again or reset your password.</span>
+          <input class="SigninInput" type="submit" value="Sign In" />
+        </form>
+      </div>
     </div>
-    <form>
-      <input type="text" placeholder="Email" id="email" class="input-box">
-      <span id="email-exists" style="display:none;color:red;">The email id provided is already existing, please sign-in and enjoy shopping</span>
-      <input type="password" placeholder="Password" id="password"class="input-box">
-      <input class="Create" type="submit" value="Create Account" />
-    </form>
-    <div id="account-created" style="display:none;color:green;">Account created successfully!
-    </div>
-  </div>
-  
-  <div id="signin" class="box-div1">
-    <div class="box-div2">
-      <i class="fa-solid fa-user-check"></i>
-      <h3 class="head" id="heading">Sign In</h3>
-    </div>
-    <form>
-      <input class="input-box" type="email" placeholder="Email" id="email1" required />
-      <span id="email-error" style="display:none;color:red;">Please enter a valid email address.</span>
-      <input class="input-box" placeholder="Password" type="password" id="password1" required />
-      <span id="password-error" style="display:none;color:red;">Email and/or password incorrect. Please try again or reset your password.</span>
-      <input class="SigninInput" type="submit" value="Sign In" />
-    </form>
-
-
   </div>
 </body>
 <script src="signin.js"></script>
