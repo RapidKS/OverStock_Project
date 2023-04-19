@@ -1,5 +1,6 @@
 
 .top_Signup_container{
+    
     height: 110px;
     background-color: #2f3337;
     display: flex;
@@ -7,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    
 }
 .top_coupon_form_div{
     display: flex;
@@ -65,7 +67,7 @@
 }
 
 .header_navbar{
-    position: relative;
+    width: 100%;
     z-index: 3;
     background-color: white;
 }
@@ -209,4 +211,46 @@
     position: fixed;
     top: 0;
     width: 100%;
+    
   }
+  .limited-deal-box-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .limited-time-img-div{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 95%;
+    margin: auto;
+    background-color: white;
+  }
+  .limited-deal-box-div > img{
+    width: 100%;
+  }
+  .limited-deal-box-p{
+    width: 100%;
+    font-size: 32px;
+    font-weight: bolder;
+    color: red;
+    margin-top: -20px;
+    margin-bottom: -10px;
+  }
+  .limited-deal-box-p2{
+    width: auto;
+    font-size: 20px;
+    font-weight: 600;
+
+  }
+  .beautiful-find-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .beautiful-find-img-main-div{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
