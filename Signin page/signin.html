@@ -60,7 +60,7 @@
   var email = document.querySelector("#email").value;
   var password = document.querySelector("#password").value;
   
-  // Check if email and password fields are empty
+  
   if (!email || !password) {
     alert("Email and password fields cannot be empty");
     return;
@@ -68,7 +68,7 @@
   
   var dataObj = { email: email, password: password };
   
-  // Check if email already exists
+  
   if (dataArr.some(function(ele) { return ele.email === email })) {
     document.querySelector("#email-exists").style.display = "inline";
     return;
@@ -90,7 +90,7 @@ function signInFun(event) {
   var password = document.querySelector("#password1").value;
   var found = false;
 
-  // Check if email is valid
+  
   if (!isValidEmail(email)) {
     document.querySelector("#email-error").style.display = "inline";
     return;
