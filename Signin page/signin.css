@@ -1,0 +1,47 @@
+#box{
+    width: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    top: 25%;
+    left: 25%;
+     
+  }
+ .box-div1{
+    width: 30%;
+    border: none;
+   
+ }
+ form{
+    display: flex;
+    flex-direction: column;
+ }
+ input{
+  margin-bottom: 30px;
+  padding: 10px;
+ }
+ .input-box{
+    border-radius: 5px;
+    border: 1px solid;
+    
+ }
+ .Create{
+    background-color: white;
+    color: black;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 40px;
+ }
+ .SigninInput{
+    background-color: black;
+    color: white;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 40px;
+ }
+ .box-div2{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+ }
