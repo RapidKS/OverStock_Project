@@ -1,12 +1,18 @@
+body{
+    background: linear-gradient(to right, white, blue   );
+}
 #box{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
     width: 50%;
     position: absolute;
     display: flex;
     justify-content: space-around;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     top: 25%;
     left: 25%;
-     
+    
+    
   }
  .box-div1{
     width: 30%;
