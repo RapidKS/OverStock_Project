@@ -38,6 +38,8 @@
       <input type="password" placeholder="Password" id="password">
       <input type="submit" value="Submit" />
     </form>
+    <div id="account-created" style="display:none;color:green;">Account created successfully!
+    </div>
   </div>
   
   <div id="signin">
@@ -49,7 +51,8 @@
       <span id="password-error" style="display:none;color:red;">Email and/or password incorrect. Please try again or reset your password.</span>
       <input type="submit" value="Submit" />
     </form>
-  </div>
+
+
   </div>
 </body>
 <script>
@@ -77,9 +80,15 @@
   }
 
   dataArr.push(dataObj);
+ 
+  document.querySelector("#email").value = "";
+  document.querySelector("#password").value = "";
   localStorage.setItem("account-data", JSON.stringify(dataArr));
+  
+  
+  document.querySelector("#account-created").textContent = "Account created successfully!";
+  document.querySelector("#account-created").style.display = "block";
 }
-
 
   var dataArr = JSON.parse(localStorage.getItem("account-data")) || [];
 document.querySelector("#signin form").addEventListener("submit", signInFun);
