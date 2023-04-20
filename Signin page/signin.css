@@ -1,0 +1,65 @@
+body{
+    background: linear-gradient(to right, white, blue   );
+}
+#box{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    width: 40%;
+    position: absolute;
+    display: block;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    top: 30%;
+    left: 30%; 
+  }
+  #innerbox{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+  }
+ .box-div1{
+    width: 45%;
+    border: none;
+   
+ }
+ form{
+    display: flex;
+    flex-direction: column;
+ }
+ input{
+  margin-bottom: 30px;
+  padding: 10px;
+ }
+ .input-box{
+    border-radius: 5px;
+    border: 1px solid;
+    
+ }
+ .Create{
+    background-color: white;
+    color: black;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 40px;
+ }
+ .SigninInput{
+    background-color: black;
+    color: white;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 40px;
+ }
+ .box-div2{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+ }
+ .divider{
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid white;
+}
+ 

@@ -7,15 +7,11 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/94814fc2e6.js" crossorigin="anonymous"></script>
     <style>
-       
+    
         #parentbox{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            width:98%;
-            margin: auto;
-          
-            
         }
         #parentbox > div{
             margin-bottom: -85px;
@@ -66,15 +62,15 @@
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
-            background-color: #227553;
+            background-color: black;
             color: #fff;
             border-radius: 4px;
             cursor: pointer;
            
         }
         button:hover{
-            background-color: #25a159;
-            border-color: #219452;
+            background-color: #636161;
+            border-color: #3e3f3e;
             color: #fff;
         }
 
@@ -82,13 +78,10 @@
 </head>
 <body>
     <div id="parentbox"></div>
-    <!-- <div><i class="fa-regular fa-cart-plus"></i></div> -->
-    <div><i class="fas fa-cart-plus"></i></div>
-    
 </body>
 </html>
 <script>
-    var prodarr = [{
+    var partio_furniture = [{
     image: "https://ak1.ostkcdn.com/images/products/is/images/direct/14f83a53d94948bd490f952f0c2101de39339a0c/Cape-Coral-Aluminum-Outdoor-Sectional-Sofa-Set-with-Fire-Table-by-Christopher-Knight-Home.jpg?imwidth=480&impolicy=medium",
     price:"Sale Starts at INR 148222.95", 
     details: "Cape Coral Aluminum Outdoor Sectional Sofa Set with Fire Table by Christopher Knight Home"
@@ -196,7 +189,7 @@
 
 ];
 
-prodarr.map(function(elm) {
+partio_furniture.map(function(elm) {
     var div1 = document.createElement("div");
     var image = document.createElement("img");
     image.setAttribute("src", elm.image);
@@ -207,13 +200,22 @@ prodarr.map(function(elm) {
     var p2 = document.createElement("p");
     p2.textContent = elm.details;
     var div3 = document.createElement("div");
-    // div3.style.border="1px solid red";
     var btn = document.createElement("button");
-    btn.textContent = "Add to Cart";
+    btn.innerHTML='<i class="fas fa-cart-plus"></i>&nbsp;&nbsp; Add to Cart';
     div3.append(btn);
     div2.append(p1, p2, div3);
     div1.append(image, div2);
     document.querySelector("#parentbox").append(div1);
+    btn.addEventListener("click", function() {
+    addtocartFun(elm);
+   });
 });
+  var cartArr = JSON.parse(localStorage.getItem("add-items")) || [];
+  function addtocartFun(elm){
+    cartArr.push(elm);
+   localStorage.setItem("add-items", JSON.stringify(cartArr));
+   console.log(cartArr);
+  }
+
 
 </script>
