@@ -416,13 +416,13 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    
 }
 .footer-container{
     display: flex;
     margin: 40px 105px 60px;
     width: 100%;
     justify-content: space-between;
-   
 
 }
 .footer-container-div{
@@ -476,5 +476,6 @@ font-size: 12px;
 .footer-p{
     color: #fff;
 }
+
 
 
