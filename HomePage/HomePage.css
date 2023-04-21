@@ -58,7 +58,7 @@
     font-size: 14px;
 }
 .top_banner_form > button{
-    height: 37.6px;
+    height: 34px;
     border-radius: 0 3px 3px 0;
     border: 1px solid #dadcdf;
     border-left: none;
@@ -142,18 +142,24 @@
     border-top: 1px solid #dadcdf;
 }
 .topnav-links{
+    margin-top: 5px;
     max-width: 1680px;
-    margin: 0 auto;
-    margin-bottom: -2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 16px;
+    padding: 0px 16px;
     background-color: #fff;
+    margin: auto;
 }
 .topnav-links > div{
-    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    color: #2f3337;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
 }
 .topnav_links_sign{
     height: 18px;
@@ -166,6 +172,12 @@
     justify-content: center;
     align-items: center
 }
+.top-nav-divider-2{
+   height: 1px;
+    width: 100%;
+    background-color: #dadcdf;
+    margin: 1px 0;
+ }
 
 .first-img-div{
     width: 95%;
@@ -204,10 +216,7 @@
     margin-top: 40px;
     
 }
-.limited-deal-img-main-div{
-    margin-top: -25px;
-    margin-bottom: -10px;
-}
+
 .limited-time-img-div{
     display: flex;
     flex-wrap: wrap;
