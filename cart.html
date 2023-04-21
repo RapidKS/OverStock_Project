@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OverStock</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="cart.css">
     <script src="https://kit.fontawesome.com/4db740c557.js" crossorigin="anonymous"></script>
 </head>
@@ -108,14 +108,14 @@
         <div class="cart-body">
             <h1 class="shopping-cart-text">Shopping Cart</h1>
             <div class="left-right">
-                <div class="left"><h2 class="empty-cart">Your Shopping cart is Empty</h2></div>
+                <div class="left" id="container"><h2 class="empty-cart">Your Shopping cart is Empty</h2></div>
                 <div class="right">
                     <div class="top">
                         <span class="top-text">Add a Promo Code</span>
                     </div>
                     <div class="bottom">
                         <div class="bottom-top">
-                            <span>Your Total</span>
+                            <span id="total-cost">Your Total</span>
                             <span>INR 0.00</span>
                         </div>
                         <button class="bottom-button">Continue Shopping</button>
@@ -125,18 +125,5 @@
         </div>
     </div>
 </body>
-<!-- <script src="NavBar.js">
-    window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
-</html> -->
+<script src="cart.js"></script>
+</html>
