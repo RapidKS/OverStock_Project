@@ -57,6 +57,7 @@ function signInFun(event) {
   });
   if (found) {
    alert("Sign in Successful");
+   window.location.assign("E:/Masai Project/OverStock_Project/HomePage/HomePage.html")
   } else {
    document.querySelector("#password-error").style.display = "inline";
   }
