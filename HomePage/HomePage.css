@@ -610,10 +610,11 @@ font-size: 12px;
     width: 100%;
 }
 .list-item-p{
+    margin-top: 10px;
     font-size: 20px;
 }
 .list-item-p2{
-    margin-top: -40px;
+    margin-top: -10px;
 }
 .menu > ul > li .sub-menu > ul > li > a{
   display: inline-block;
