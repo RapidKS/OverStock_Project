@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://kit.fontawesome.com/94814fc2e6.js" crossorigin="anonymous"></script>
+    <style>
+    
+        #parentbox{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        #parentbox > div{
+            margin-bottom: -85px;
+        }
+        
+        #childbox > p+p {
+            width: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            max-height: 62px;
+            overflow: hidden;
+            width: 95%;
+            color: #545658;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+            height: 40px;
+            cursor: pointer;
+           
+        }
+        #childbox > p {
+             color: #2f3337;
+             font-size: 16px;
+             line-height: 17px;
+             font-weight: 700;
+             margin-bottom: 8px;
+             font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+             cursor: pointer;
+        
+        }
+        img{
+            width: 100%;
+            cursor: pointer;
+            height: 60%;
+        }
+        button{
+            border-color: #219452;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+            font-size: 14px;
+            background: #fafafa;
+            border: 1px solid #d5d7d8;
+            width: 100%;
+            padding: 6px 12px 6px;
+            text-align: center;
+            color: #454545;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            background-color: black;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+           
+        }
+        button:hover{
+            background-color: #636161;
+            border-color: #3e3f3e;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+  <div id="sort">
+    <select id="sort-price">
+        <option value="">Sort by Price</option>
+        <option value="asc">Price: Low to High</option>
+        <option value="desc">Price: High to Low</option>
+    </select>
+</div>
+
+    <div>
+        <select id="filter">
+        <option value="">Select color</option>
+        <option value="grey">grey</option>
+        <option value="black">black</option>
+        <option value="beige">beige</option>
+        <option value="brown">brown</option>
+        </select> 
+    </div>
+    <div>
+        <select id="filter-material">
+        <option value="">Select Material</option>
+        <option value="Metal">Metal</option>
+        <option value="Wood">Wood</option>
+        <option value="Cane">Cane</option>
+        <option value="Leather">Leather</option>
+        <option value="Fabric">Fabric</option>
+        </select>
+    </div>
+    <div>
+        <select id="filter-brand">
+        <option value="">Select Brand</option>
+        <option value="Christopher Knight Home">Christopher Knight Home</option>
+        <option value="OVIOS">OVIOS</option>
+        <option value="Havenside Home">Havenside Home</option>
+        <option value="SAFAVIEH">SAFAVIEH</option>
+        <option value="Eilaf">Eilaf</option>
+        <option value="Holme">Holme</option>
+        <option value="PATIO">PATIO</option>
+        <option value="Faux Rattan">Faux Rattan</option>
+        </select>
+    </div>
+    <div id="parentbox"></div>
+</body>
+</html>
+<script>
+    var partio_furniture = [{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/14f83a53d94948bd490f952f0c2101de39339a0c/Cape-Coral-Aluminum-Outdoor-Sectional-Sofa-Set-with-Fire-Table-by-Christopher-Knight-Home.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 148222.95", color:"black", Material:"Metal",Brand:"Christopher Knight Home",
+    details: "Cape Coral Aluminum Outdoor Sectional Sofa Set with Fire Table by Christopher Knight Home"
+}, 
+{
+    image: "https://ak1.ostkcdn.com/images/products/17632570/Cape-Coral-Outdoor-Aluminum-7-piece-Sofa-Chat-Set-with-Cushions-Fire-Table-by-Christopher-Knight-Home-968e0df6-576d-4c85-b252-9cf60dfa9f1a_1000.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 231045.79", color:"grey", Material:"Metal",Brand:"Christopher Knight Home",
+    details: "Cape Coral Aluminum 7-piece Sofa Chat Set by Christopher Knight Home"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/a85e92d4c3854ff088d6ccbb9bba2589a732cdac/Ovios-Rattan-Wicker-5-piece-Patio-Furniture-Set.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 71619.64", color:"grey", Material:"Metal",Brand:"OVIOS",
+    details: "OVIOS 5-piece Patio Conversation Wicker Furniture Set"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/17632570/Cape-Coral-Outdoor-Aluminum-7-piece-Sofa-Chat-Set-with-Cushions-Fire-Table-by-Christopher-Knight-Home-968e0df6-576d-4c85-b252-9cf60dfa9f1a_1000.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 231045.79", color:"grey", Material:"Cane",Brand:"Christopher Knight Home",
+    details: "Cape Coral Aluminum Outdoor Sectional Sofa Set with Fire Table by Christopher Knight Home"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/de92e2f8fc1edcc20d3c01350eb9a7bd4704c73b/Plymouth-Patio-Aluminum-30-inch-Outdoor-Wicker-Bar-Stools-%28Set-of-4%29-by-Havenside-Home.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 70066.87",color:"grey", Material:"Cane",Brand:"Havenside Home",
+    details: "Plymouth Patio Aluminum 30-inch Outdoor Wicker Bar Stools (Set of 4) by Havenside Home"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/d722072be198534cb7f7b80f3b32b35a61880e93/COSIEST-Outdoor-3-piece-Rocking-Chair-Bistro-Set.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 19689.05", color:"beige", Material:"Leather", Brand:"COSIEST",
+    details: "COSIEST 3-piece Outdoor Rocking Chair Chat Set with Side Table"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/30027158/Carlisle-Outdoor-Acacia-Wood-Picnic-Dining-Set-by-Christopher-Knight-Home-19cc5379-6345-4ecd-982d-07bd6305a0c2_1000.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 7278.50", color:"brown", Material:"Wood", Brand:"Christopher Knight Home",
+    details: "Carlisle Outdoor Acacia Wood Picnic Dining Set by Christopher Knight Home"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/ec62c13441c34143cc5707e19f244c056664d51e/Ovios-3-piece-Rattan-Wicker-Rocking-Swivel-Chair-Set.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 47744.86", color:"grey", Material:"Cane",Brand:"OVIOS", 
+    details: "OVIOS 3-piece Rattan Wicker Rocking Swivel Chair Set"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/8cdf032c2765e466d6dfc77b7087bf2dee2d9a73/Corsica-Outdoor-Round-Dining-Table-by-Christopher-Knight-Home.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 21107.73", color:"brown", Material:"Cane", Brand:"Christopher Knight Home",
+    details: "Corsica Outdoor Round Dining Table by Christopher Knight Home"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/6d2973557df47504e7bdc2116515b9c02c6c77f1/OVIOS-Patio-Furniture-Wicker-5-piece-Outdoor-High-back-Sectional-Set.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 74364.18", color:"brown", Material:"Cane", Brand:"OVIOS", 
+    details: "OVIOS 5-piece Patio Furniture Wicker Outdoor High-back Sectional Set"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/32c52940db552ea5179226df0912e6ff906dde78/PHI-VILLA-15ft-Patio-Umbrella-Double-Sided-Outdoor-Market-Extra-Large-Umbrella-with-Crank%2C-Umbrella-Base-Included.jpg?imwidth=480&impolicy=medium",
+    price:"Starting at INR 15632.72", color:"black", Material:"Cane", Brand:"PHI VILLA", 
+    details: "PHI VILLA 15-foot Rectangular Crank Outdoor Market Umbrella with Base Included"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/13dcd6c7b41a5a10ab6d127f9ec17087b05afe03/6-Pieces-Patio-Furniture-Set-Outdoor-Sectional-Sofa-Conversation-Set.jpg?imwidth=480&impolicy=medium",
+    price:"Sale INR 57117.74",color:"black", Material:"Cane",Brand:"Faux Rattan",  
+    details: "6-piece Cushioned Faux Rattan Patio Sectional Sofa Conversation Set"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/c7d737328186286ef6e3b7de7003a78d3a4d4b75/PATIO-FESTIVAL-5-Piece-Outdoor-Dining-Set.jpg?imwidth=480&impolicy=medium",
+    price:"Sale INR 35919.99",color:"black", Material:"Metal",Brand:"PATIO",  
+    details: "PATIO FESTIVAL 5-Piece Outdoor Metal Dining Set"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/29d70f5ce6ddcbc88bc2fb72018973da0a1df3cf/Holme-9-foot-Steel-Market-Patio-Umbrella-with-Tilt-and-Crank.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 6197.95",color:"beige", Material:"Wood",Brand:"Holme",  
+    details: "Holme 9-foot Steel Market Patio Umbrella with Tilt-and-Crank"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/e40142d49acca3c1fb61844e4ad594cb33c4a3ae/SAFAVIEH-Outdoor-Cadeo-Wicker-Daybed-with-Pillows-and-Cushions..jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 43406.30",color:"grey", Material:"Cane",Brand:"Christopher Knight Home",  
+    details: "Cape Coral Aluminum Outdoor Sectional Sofa Set with Fire Table by Christopher Knight Home"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/6123f547c6fc1902fb0053caaa8d302d0b879ec5/Eilaf-48-inch-Round-Eucalyptus-Folding-Table-by-Havenside-Home.jpg?imwidth=480&impolicy=medium",
+    price:"Sale INR 28479.64", color:"brown", Material:"Wood",Brand:"Eilaf",  
+    details: "Eilaf 48 Round Eucalyptus Folding Table"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/e40142d49acca3c1fb61844e4ad594cb33c4a3ae/SAFAVIEH-Outdoor-Cadeo-Wicker-Daybed-with-Pillows-and-Cushions..jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 43406.30", color:"grey", Material:"Fabric",Brand:"SAFAVIEH", 
+    details: "SAFAVIEH Outdoor Cadeo Wicker Daybed with Pillows and Cushions"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/264650cbadd0059f89ac09027159aedd84acd58f/Bossin-Patio-Furniture-Sets-Outdoor-Sectional-Sofa-All-Weather-PE-Rattan-Patio-Conversation-Set.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 36940.17",color:"black", Material:"Cane",Brand:"COSIEST",  
+    details: "Bossin Patio Furniture Sets Outdoor Sectional Sofa All Weather PE Rattan Patio Conversation Set - 76.4inch x 50inch x 23.6 inch"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/2b9c360b6cce64ccdce9f4372c4bb3c5a03c0ab3/5-piece-Metal-Outdoor-Patio-Dining-Set-with-4-Stackable-Chairs-and-1-Slat-E-coating-Weather-resistant-SquareTable.jpg?imwidth=480&impolicy=medium",
+    price:"Starting at INR 37505.58", color:"black", Material:"Metal", Brand:"COSIEST",
+    details: "5-piece Outdoor E-coated Patio Dining Set with Stackable Chairs"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/dc07a4022adc818388400904bec333c632f837db/Carlisle-Outdoor-3-Piece-Acacia-Picnic-Dining-Set-with-Benches-by-Christopher-Knight-Home.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 51683.05", color:"brown", Material:"Wood",Brand:"Christopher Knight Home", 
+    details: "Carlisle Outdoor 3 Piece Acacia Picnic Dining Set with Benches by Christopher Knight Home"
+},
+{
+    image: "https://ak1.ostkcdn.com/images/products/is/images/direct/e691b824f46e706521ca4f9929d886fd78b0fcc5/Elize-Outdoor-French-Bistro-Chair-%28Set-of-2%29-by-Christopher-Knight-Home.jpg?imwidth=480&impolicy=medium",
+    price:"Sale Starts at INR 23034.63", color:"brown", Material:"Fabric",Brand:"Christopher Knight Home", 
+    details: "Elize Outdoor French Bistro Chair (Set of 2) by Christopher Knight Home"
+},
+
+];
+
+partio_furniture.map(function(elm) {
+    var div1 = document.createElement("div");
+    var image = document.createElement("img");
+    image.setAttribute("src", elm.image);
+    var div2 = document.createElement("div");
+    div2.setAttribute("id", "childbox")
+    var p1 = document.createElement("p");
+    p1.textContent = elm.price;
+    var p2 = document.createElement("p");
+    p2.textContent = elm.details;
+    var div3 = document.createElement("div");
+    var btn = document.createElement("button");
+    btn.innerHTML='<i class="fas fa-cart-plus"></i>&nbsp;&nbsp; Add to Cart';
+    div3.append(btn);
+    div2.append(p1, p2, div3);
+    div1.append(image, div2);
+    document.querySelector("#parentbox").append(div1);
+    btn.addEventListener("click", function() {
+    addtocartFun(elm);
+   });
+});
+  var cartArr = JSON.parse(localStorage.getItem("add-items")) || [];
+  function addtocartFun(elm){
+    cartArr.push(elm);
+   localStorage.setItem("add-items", JSON.stringify(cartArr));
+   console.log(cartArr);
+  }
+//filter by color
+var filterDropdown = document.getElementById("filter");
+
+filterDropdown.addEventListener("change", filterProducts);
+
+function filterProducts() {
+  var selectedColor = filterDropdown.value;
+  var filtered;
+
+  if (selectedColor !== "") {
+    filtered = partio_furniture.filter(function(ele) {
+      return ele.color === selectedColor;
+    });
+  } else {
+    filtered = partio_furniture;
+  }
+
+  var parentBox = document.getElementById("parentbox");
+  parentBox.innerHTML = "";
+
+  for (var i = 0; i < filtered.length; i++) {
+    var childBox = document.createElement("div");
+    childBox.id = "childbox";
+
+    var image = document.createElement("img");
+    image.src = filtered[i].image;
+
+    var details = document.createElement("p");
+    details.textContent = filtered[i].details;
+
+    var price = document.createElement("p");
+    price.textContent = filtered[i].price;
+
+    var button = document.createElement("button");
+    button.innerHTML='<i class="fas fa-cart-plus"></i>&nbsp;&nbsp; Add to Cart';
+
+    childBox.appendChild(image);
+    childBox.appendChild(price);
+    childBox.appendChild(details);
+    childBox.appendChild(button);
+
+    parentBox.appendChild(childBox);
+  }
+}
+
+//filter by material
+var filterMaterial = document.getElementById("filter-material");
+
+filterMaterial.addEventListener("change", filterMatFun);
+
+function filterMatFun() {
+  var selectedMat = filterMaterial.value;
+  var filtered;
+
+  if (selectedMat !== "") {
+    filtered = partio_furniture.filter(function(ele) {
+      return ele.Material === selectedMat;
+    });
+  } else {
+    filtered = partio_furniture;
+  }
+
+  var parentBox = document.getElementById("parentbox");
+  parentBox.innerHTML = "";
+
+  for (var i = 0; i < filtered.length; i++) {
+    var childBox = document.createElement("div");
+    childBox.id = "childbox";
+
+    var image = document.createElement("img");
+    image.src = filtered[i].image;
+
+    var details = document.createElement("p");
+    details.textContent = filtered[i].details;
+
+    var price = document.createElement("p");
+    price.textContent = filtered[i].price;
+
+    var button = document.createElement("button");
+    button.innerHTML='<i class="fas fa-cart-plus"></i>&nbsp;&nbsp; Add to Cart';
+
+    childBox.appendChild(image);
+    childBox.appendChild(price);
+    childBox.appendChild(details);
+    childBox.appendChild(button);
+
+    parentBox.appendChild(childBox);
+  }
+}
+
+
+var filterBrand = document.getElementById("filter-brand");
+
+filterBrand.addEventListener("change", filterBranFun);
+
+function filterBranFun() {
+  var selectedBran = filterBrand.value;
+  var filtered;
+
+  if (selectedBran !== "") {
+    filtered = partio_furniture.filter(function(ele) {
+      return ele.Brand === selectedBran;
+    });
+  } else {
+    filtered = partio_furniture;
+  }
+
+  var parentBox = document.getElementById("parentbox");
+  parentBox.innerHTML = "";
+
+  for (var i = 0; i < filtered.length; i++) {
+    var childBox = document.createElement("div");
+    childBox.id = "childbox";
+
+    var image = document.createElement("img");
+    image.src = filtered[i].image;
+
+    var details = document.createElement("p");
+    details.textContent = filtered[i].details;
+
+    var price = document.createElement("p");
+    price.textContent = filtered[i].price;
+
+    var button = document.createElement("button");
+    button.innerHTML='<i class="fas fa-cart-plus"></i>&nbsp;&nbsp; Add to Cart';
+
+    childBox.appendChild(image);
+    childBox.appendChild(price);
+    childBox.appendChild(details);
+    childBox.appendChild(button);
+
+    parentBox.appendChild(childBox);
+  }
+}
+function sortFurnitureByPrice() {
+  const sortValue = document.getElementById("sort-price").value;
+
+  if (sortValue === "asc") {
+    partio_furniture.sort((a, b) => {
+      return parseFloat(a.price.replace(/[^0-9.-]+/g, "")) - parseFloat(b.price.replace(/[^0-9.-]+/g, ""));
+    });
+  } else if (sortValue === "desc") {
+    partio_furniture.sort((a, b) => {
+      return parseFloat(b.price.replace(/[^0-9.-]+/g, "")) - parseFloat(a.price.replace(/[^0-9.-]+/g, ""));
+    });
+  }
+
+  renderFurniture();
+}
+document.getElementById("sort-price").addEventListener("change", sortFurnitureByPrice);
+function renderFurniture() {
+  const parentbox = document.getElementById("parentbox");
+  parentbox.innerHTML = "";
+
+  const filterColor = document.getElementById("filter").value;
+  const filterMaterial = document.getElementById("filter-material").value;
+  const filterBrand = document.getElementById("filter-brand").value;
+
+  partio_furniture.forEach((furniture) => {
+    if (
+      (filterColor === "" || furniture.color === filterColor) &&
+      (filterMaterial === "" || furniture.Material === filterMaterial) &&
+      (filterBrand === "" || furniture.Brand === filterBrand)
+    ) {
+      const childbox = document.createElement("div");
+      childbox.id = "childbox";
+
+      const img = document.createElement("img");
+      img.src = furniture.image;
+      childbox.appendChild(img);
+
+      const p2 = document.createElement("p");
+      p2.innerHTML = furniture.price;
+      childbox.appendChild(p2);
+
+      const p = document.createElement("p");
+      p.innerHTML = furniture.details;
+      childbox.appendChild(p);
+
+      
+
+      const button = document.createElement("button");
+      button.innerHTML='<i class="fas fa-cart-plus"></i>&nbsp;&nbsp; Add to Cart';
+      childbox.appendChild(button);
+
+      parentbox.appendChild(childbox);
+    }
+  });
+}
+
+</script>
