@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment Successful</title>
+    <link rel="stylesheet" type="text/css" href="success.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="svg-container">    
+            <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 48 48" aria-hidden="true">
+                <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22"/>
+                <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17"/>
+            </svg>
+        </div>
+        
+      <h1>Payment Successful</h1>
+      <p class="top">
+        Thank you for your purchase! Your payment has been successfully
+        processed.
+      </p>
+      <div class="order-details">
+        <h2>Order Details</h2>
+        <p><strong>Order Number: #256976</strong></p>
+        <p><strong>Shipping Address:</strong></p>
+        <ul id="shipping-details">         
+        </ul>
+      
+        <p><strong>Payment Details:</strong></p>
+        <ul id="payment-details">
+          <li>Card Number: **** **** **** 1234</li>
+          <li>Expiration Date: 12/23</li>
+          <li>CVV: ***</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+        var shippingDetails = JSON.parse(localStorage.getItem('shippingDetails'));
+        var paymentDetails = JSON.parse(localStorage.getItem('paymentDetails'));
+        var shippingDetailsString = 'Name: ' + shippingDetails.fname + 
+                                    shippingDetails.lname + '<br>' +
+                                    'Address: ' + shippingDetails.address1 + '<br>' +
+                                    'City: ' + shippingDetails.city + '<br>' +
+                                    'State: ' + shippingDetails.state + '<br>' +
+                                    'ZIP code: ' + shippingDetails.zip;
+        var paymentDetailsString = 'Card number: ' + paymentDetails.cardnumber + '<br>' +
+                                   'Expiration date: ' + paymentDetails.expdate + '<br>' +
+                                   'CVV: ***' ;
+        document.getElementById('shipping-details').innerHTML = shippingDetailsString;
+        document.getElementById('payment-details').innerHTML = paymentDetailsString;
+       
+      </script>
+  </body>
+</html>
+

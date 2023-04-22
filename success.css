@@ -1,0 +1,74 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+.container {
+   
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 50px 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    margin-top: 30px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 50px;
+    
+}
+h2 {
+	font-size: 25px;
+	margin-bottom: 5px;
+}
+.top{
+    margin-top: -30px;
+}
+svg{
+   display: block;
+   margin: auto;
+   margin-top: -40px;
+}
+@supports (animation: grow .5s cubic-bezier(.25, .25, .25, 1) forwards) {
+    .tick {
+       stroke-opacity: 0;
+       stroke-dasharray: 29px;
+       stroke-dashoffset: 29px;
+       animation: draw .5s cubic-bezier(.25, .25, .25, 1) forwards;
+       animation-delay: .6s
+   }
+
+   .circle {
+       fill-opacity: 0;
+       stroke: #219a00;
+       stroke-width: 16px;
+       transform-origin: center;
+       transform: scale(0);
+       animation: grow 1s cubic-bezier(.25, .25, .25, 1.25) forwards;   
+   }   
+}
+
+@keyframes grow {
+   60% {
+       transform: scale(.8);
+       stroke-width: 4px;
+       fill-opacity: 0;
+   }
+   100% {
+       transform: scale(.9);
+       stroke-width: 8px;
+       fill-opacity: 1;
+       fill: #219a00;
+   }
+}
+
+@keyframes draw {
+   0%, 100% { stroke-opacity: 1; }
+   100% { stroke-dashoffset: 0; }
+}
+
+
+
