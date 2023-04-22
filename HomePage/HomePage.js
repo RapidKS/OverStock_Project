@@ -69,4 +69,7 @@ window.onresize = function(){
   }
 }
 
-document.querySelector("#Accounts")
+document.getElementById("#Accounts").addEventListener("click" , redirect());
+function redirect(){
+  window.location.assign("signin.html")
+}

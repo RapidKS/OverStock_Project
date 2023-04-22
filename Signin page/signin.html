@@ -6,116 +6,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign up </title>
-  <link rel="stylesheet" href="signin.css">
-  <script src="https://kit.fontawesome.com/4db740c557.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="signIn.css">
 </head>
 
 <body>
-<div class = "header_navbar" id="myHeader">
-    <div class="header_divider"></div>
-    <div class="search_header">
-        <a class="overstock_logo" href="file:///E:/Masai%20Project/OverStock_Project/Navbar.html"><img src="https://th.bing.com/th?id=OIP.ZFPmAcPcNvdDz6KUkRvVTAHaBR&w=361&h=62&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="overstock"></a>
-        <div id="header_searchbar" class="header_search">
-            <form class="nav_search">
-                <div class="search_div">
-                    <input placeholder="Search... everything you find ships for free" class="input_search" >
-                </div>
-               
-            </form>
-        </div>
-        <div class="user-interfrence">
-            <div class="user_int_logo">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="user_int_logo">
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <div class="user_int_logo">
-                <i class="fa-solid fa-cart-plus"></i>
-            </div>
-        </div>
-    </div>
-    <div id="top_nav" class="topnav-contain">
-        <div class="topnav-links">
-            <div>
-                <p>Furniture</p>
-            </div>
-            <div>
-                <p>Outdoor</p>
-            </div>
-            <div>
-                <p>Rugs</p>
-            </div>
-            <div>
-                <p>Decor</p>
-            </div>
-            <div>
-                <p>Bedding</p>
-            </div>
-            <div>
-                <p>Home Improvement</p>
-            </div>
-            <div>
-                <p>Kitchen</p>
-            </div>
-            <div>
-                <p>Lighting</p>
-            </div>
-            <div>
-                <p>Kids & Baby</p>
-            </div>
-            <div>
-                <p>Bath</p>
-            </div>
-            <div>
-                <p>More</p>
-            </div>
-            <div class="topnav_links_sign"></div>
-            <div>
-                <p>Ideas</p>
-            </div>
-            <div>
-                <p>Sales & Deals</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-  <div class="top-nav-divider-2"></div>
-
+  <div id="icon"><svg xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="#000"><path d="M164 23.126h-.274v-1.96h-.01l-.764 1.96h-.178l-.763-1.96H162v1.96h-.275v-2.188h.506l.631 1.617h.01l.622-1.617H164v2.188zm-2.684-1.98h-.705v1.98h-.274v-1.98h-.705v-.208h1.684v.208zM34.58 14.78c0 3.558 1.94 7.117 5.855 7.117 3.914 0 5.855-3.559 5.855-7.118 0-3.558-1.94-7.117-5.855-7.117-3.915 0-5.856 3.559-5.856 7.117m13.75 0c0 4.788-2.783 8.833-7.894 8.833-5.112 0-7.894-4.045-7.894-8.833s2.782-8.831 7.894-8.831c5.111 0 7.894 4.043 7.894 8.831M47.965 6.433h2.264l5.241 14.655h.065l5.176-14.655h2.103L56.57 23.126h-2.167zM75.506 13.615C75.409 10.54 73.5 7.662 70.2 7.662c-3.332 0-5.176 2.912-5.5 5.953h10.806zM64.7 15.329c.032 2.977 1.585 6.568 5.5 6.568 2.977 0 4.594-1.747 5.24-4.27h2.04c-.874 3.785-3.074 5.984-7.28 5.984-5.306 0-7.538-4.076-7.538-8.832 0-4.4 2.232-8.831 7.538-8.831 5.37 0 7.506 4.69 7.344 9.381H64.7zM98.486 11.318c-.097-2.524-2.038-3.656-4.367-3.656-1.812 0-3.947.712-3.947 2.88 0 1.811 2.07 2.458 3.462 2.814l2.717.615c2.33.355 4.756 1.714 4.756 4.626 0 3.623-3.591 5.015-6.697 5.015-3.883 0-6.535-1.812-6.859-5.889h2.039c.162 2.75 2.2 4.174 4.917 4.174 1.91 0 4.562-.841 4.562-3.17 0-1.941-1.812-2.589-3.656-3.042l-2.62-.582c-2.653-.712-4.66-1.618-4.66-4.465 0-3.397 3.333-4.69 6.277-4.69 3.332 0 5.985 1.747 6.114 5.37h-2.038zM106.109 6.433h3.397v1.714h-3.397v11.259c0 1.326.194 2.103 1.65 2.2.582 0 1.165-.033 1.747-.097v1.747c-.615 0-1.197.064-1.812.064-2.718 0-3.656-.905-3.623-3.752V8.148h-1.973V6.432h1.973V1.419h2.038v5.014zM111.924 14.78c0 3.558 1.941 7.117 5.856 7.117s5.856-3.559 5.856-7.118c0-3.558-1.941-7.117-5.856-7.117s-5.856 3.559-5.856 7.117m13.75 0c0 4.788-2.783 8.833-7.894 8.833-5.111 0-7.894-4.045-7.894-8.833s2.783-8.831 7.894-8.831c5.111 0 7.894 4.043 7.894 8.831M140.117 11.674c-.55-2.491-2.07-4.012-4.723-4.012-3.915 0-5.856 3.559-5.856 7.117 0 3.56 1.94 7.118 5.856 7.118 2.523 0 4.594-1.974 4.852-4.756h2.038c-.55 4.012-3.17 6.47-6.89 6.47-5.112 0-7.894-4.043-7.894-8.832 0-4.788 2.782-8.832 7.894-8.832 3.559 0 6.308 1.91 6.761 5.727h-2.038zM144.425.027h2.038v14.494l9.253-8.088h2.717l-7.117 6.179 7.603 10.514h-2.556l-6.6-9.09-3.3 2.75v6.34h-2.038zM87.083 6.28c-2.342.324-4.105 1.796-4.981 4.067h-.065V6.433H80.16v16.693H82.2V14.23c0-3.03 1.931-5.488 4.884-5.926V6.28z"></path></g><g fill="#FF1F2C"><path d="M.666.06v14.66C2.828 8.896 8.816 4.443 14.9 4.443c6.74 0 11.04 5.464 9.609 12.202-1.105 5.195-5.295 9.628-10.243 11.388h14.374V.061H.666z"></path><path d="M20.04 16.645c0-5.824-3.463-10.547-7.734-10.547s-7.734 4.723-7.734 10.547c0 5.825 3.463 10.547 7.734 10.547s7.734-4.722 7.734-10.547"></path></g></g></svg>
+  </div>
+  <hr>
   <div id="box">
     <div id="innerbox">
       <div id="signup" class="box-div1">
         <div class="box-div2">
-          <i class="fa-solid fa-user-plus"></i>
           <h3 class="head">Create Account</h3>
         </div>
         <form>
+            <label for="">Email Address *</label>
           <input type="text" placeholder="Email" id="email" class="input-box">
           <span id="email-exists" style="display:none;color:red;">The email id provided is already existing, please sign-in and enjoy shopping</span>
+          <label for="">Create Password *</label>
           <input type="password" placeholder="Password" id="password"class="input-box">
-          <input class="Create" type="submit" value="Create Account" />
+          <div id="check">
+            <input type="checkbox"> 
+            <p id="offers">Sign up today for <span id="exclusive">exclusive offers</span> from Overstock.com delivered right to your inbox**</p>
+
+        </div>
+            <input class="Create" type="submit" value="Create Account" />
         </form>
         <div id="account-created" style="display:none;color:green;">Account created successfully!
         </div>
+        <button class="guest">Continue as Guest</button>
+       
+        <p class="terms">By creating an account or continuing as a Guest, you agree to our <a href="https://help.overstock.com/help/s/article/TERMS-AND-CONDITIONS" target="_blank">Terms & Conditions</a> and <a href="https://help.overstock.com/help/s/article/PRIVACY-AND-SECURITY-POLICY" target="_blank"> Privacy Policy. <br></a>
+            <a href="https://help.overstock.com/help/s/article/TERMS-AND-CONDITIONS" target="_blank"></p>
+            <p class="terms" id="condition"> Terms & Conditions</a>| <a href="https://help.overstock.com/help/s/article/PRIVACY-AND-SECURITY-POLICY" target="_blank"> Privacy Policy.</a> <br>
+            **You can unsubscribe at any time</p>
       </div>
-      <div class="divider"></div>
+      <div class="divider"></div> 
     
       <div id="signin" class="box-div1">
         <div class="box-div2">
-          <i class="fa-solid fa-user-check"></i>
           <h3 class="head" id="heading">Sign In</h3>
         </div>
         <form>
+            <label for="">Email Address *</label>
           <input class="input-box" type="email" placeholder="Email" id="email1" required />
           <span id="email-error" style="display:none;color:red;">Please enter a valid email address.</span>
+          <label for="">Password *</label>
           <input class="input-box" placeholder="Password" type="password" id="password1" required />
           <span id="password-error" style="display:none;color:red;">Email and/or password incorrect. Please try again or reset your password.</span>
           <input class="SigninInput" type="submit" value="Sign In" />
         </form>
+        <a id="forgot" href="https://www.overstock.com/resetRequest" target="_blank">Forgot your password?</a>
       </div>
     </div>
+  </div> 
+
+  <div>
+
   </div>
 </body>
-<script src="signin.js"></script>
-</html>
+<script src="signIn.js"></script>

@@ -1,229 +1,158 @@
-.top_Signup_container{
-   height: 110px;
-   background-color: #2f3337;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
-   padding: 10px;
-}
-.top_coupon_form_div{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   height: 75px;
-   
-}
-.top_coupon_container{
-   display: flex;
+#box{
+   background-color: transparent;
+   backdrop-filter: blur(15px);
+   width: 55%;
+   position: absolute;
+   display: block;
    justify-content: center;
-   align-items: center;
+   border: 2px solid rgba(255, 255, 255, 0.5);
+   top: 10%;
+   left: 20%;
+ }
+ #innerbox{
+   display: flex;
+   width: 90%;
+   margin: auto;
+   justify-content: space-around;
+ }
+.box-div1{
+   width: 45%;
+   border: none;
+  
 }
-.top_coupon_ptag{
-   color: #fff;
-   margin: 0 10px 0 0;
+form{
+   display: flex;
+   flex-direction: column;
 }
-.top_arrowhead{
-   transform: rotate(.5turn);
+input{
+ margin-bottom: 30px;
+ padding: 12px;
+ 
 
 }
-.top_banner_form_terms{
-   box-sizing: border-box;
+.input-box{
+   border-radius: 5px;
+   border: 1px solid rgb(170, 168, 168);
+
    
 }
-.top_banner_form{
-   display: flex;
-   
-}
-.top_banner_form_a , .top_banner_form_span{
+.Create{
+   background-color:#026089;;
+   padding: 11px 15px;
    color: #fff;
+   border-radius: 3px;
+   font-weight: bold;
+   font-size: 16px;
+   text-align: center;
+   border: 1px solid #d5d7d8;
+   width: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 15px;
+}
+.SigninInput{
+   background-color: #27865F;
+   padding: 11px 15px;
+   border-color: #219452;
+   color: #fff;
+   border-radius: 3px;
+   font-weight: bold;
+   font-size: 16px;
+   text-align: center;
+   border: 1px solid #d5d7d8;
+   width: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 15px;
+}
+.box-div2{
+   display: flex;
+   align-items: center;
+   justify-content: left;
+}
+.divider{
+   position:absolute;
+   left:50%;
+   top:10%;
+   bottom:10%;
+   border-left:1px solid rgb(182, 178, 178);
+}
+.head{
+   margin-left: 40px;
+}
+#check{
+   display: flex;
+   border: 1px solid rgb(170, 168, 168);
+   border-radius: 5px;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+.guest{
+   color: rgb(238, 231, 231);
+   height: 40px;
+   padding: 11px 15px;
+   color: #454545;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: inherit;
+   background: #fafafa;
+   border: 1px solid #dadcdf;
+   width: 100%;
+   padding: 6px 12px 6px;
+   text-align: center;
+   border-radius: 3px;
+   font-weight: bold;
+   font-size: 16px;
+}
+label{
+   padding-left: 90px;
+   padding-bottom: 10px;
+   font-size: 14px;
+   font-family: Helvetica, Arial, sans-serif;
+   color: #000;
+}
+
+#heading{
+   padding-left: 60px;
+}
+.head{
+   padding-left: 40px;
+   margin-bottom: 30px;
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: bold;
+}
+#forgot{
+   margin-left: 16%;
+   padding-left: 10%;
+   color: #0272a2;
+}
+.terms{
+ font-family: Helvetica, Arial, sans-serif;
+ color: #626669;
+ font-size: 12px;
+}
+a{
+   color:black;
+   font-size: 12px;
+   font-weight: bolder;
+   font-family: Helvetica, Arial, sans-serif;
+}
+#icon{
+ margin-top:28px;
+ width: 20%;
+ margin: auto;
+ height: 29px;
+ padding-top: 15px;
+}
+#offers{
+   font-family: Helvetica, Arial, sans-serif;
+   color: #070707;
    font-size: 12px;
 }
-.top_banner_form_a+span{
-   margin: 0 5px;
+#exclusive{
+ color: #000;
+ font-weight:bold;
 }
-.top_banner_form > input{
-   height: 34px;
-   border-radius: 3px 0 0 3px;
-   border: 1px solid #dadcdf;
-   border-right: none;
-   flex: 1;
-   padding-left: 10px;
-   font-size: 14px;
+hr{
+ width: 70%;
 }
-.top_banner_form > button{
-   height: 37.6px;
-   border-radius: 0 3px 3px 0;
-   border: 1px solid #dadcdf;
-   border-left: none;
-   padding: 0 10px;
-   width: 80px;
-   background-color: #f5f6f7;
-   font-size: 14px;
-   color: #2f3337;
+#condition{
+ margin-left: 40px;
 }
-
-.header_navbar{
-   position: relative;
-   z-index: 3;
-   background-color: white;
-}
-.header_divider{
-   background-color: #fff;
-   border-top: 1px solid #dadcdf;
-   height: 6px;
-   width: 100%;
-}
-.search_header{
-   display: flex;
-   justify-content: space-between;
-   height: 36px;
-   align-items: center;
-   padding: 0 16px;
-   max-width: 1680px;
-   margin: 18px auto;
-   background-color: #fff;
-}
-.overstock_logo{
-   display: flex;
-   align-items: center;
-   height: 100%;
-   width: 10%;
-   margin-right: 10px;
-}
-.overstock_logo > img{
-   width: 100%;
-}
-
-.header_search{
-   flex-grow: 1;
-   height: 34px;
-   margin-right: 12px;
-}
-.nav_search{
-   height: 100%;
-   width: 100%;
-   display: flex;
-   position: relative;
-}
-.input_search{
-   border: 1px solid #dadcdf;
-   border-radius: 4px 0 0 4px;
-   background-color: #f9fafb;
-   padding: 0 10px;
-   font-size: 16px;
-   appearance: none;
-   line-height: 34px;
-   width: 100%;
-   height: 100%;
-}
-.search_div{
-   width: 100%;
-   height: 100%;
-}
-.user-interfrence{
-   display: flex;
-   width: 10%;
-}
-.user_int_logo{
-   width: 33%;
-   margin-left: 30px;
-}
-.topnav-contain{
-   width: 100%;
-   height: 34px;
-   padding-bottom: 0;
-   border-top: 1px solid #dadcdf;
-}
-.topnav-links{
-   max-width: 1680px;
-   margin: 0 auto;
-   margin-bottom: -2px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 100%;
-   padding: 0 16px;
-   background-color: #fff;
-}
-.topnav-links > div{
-   box-sizing: border-box;
-}
-.topnav_links_sign{
-   height: 18px;
-   width: 1px;
-   background-color: #dadcdf;
-   margin: auto 6px;
-}
-.magnifine{
-   display: flex;
-   justify-content: center;
-   align-items: center
-}
-
- .top-nav-divider-2{
-   height: 1px;
-    width: 100%;
-    background-color: #dadcdf;
-    margin: 1px 0;
- }
-
-#box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto; 
-  }
-  #innerbox{
-    display: flex;
-    width: 90%;
-    justify-content: space-around;
-    width: 40%;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-  }
- .box-div1{
-    width: 45%;
-    border: none;
-   
- }
- form{
-    display: flex;
-    flex-direction: column;
- }
- input{
-  margin-bottom: 30px;
-  padding: 10px;
- }
- .input-box{
-    border-radius: 5px;
-    border: 1px solid;
-    
- }
- .Create{
-    background-color: white;
-    color: black;
-    border: 2px solid;
-    border-radius: 10px;
-    height: 40px;
- }
- .SigninInput{
-    background-color: black;
-    color: white;
-    border: 2px solid;
-    border-radius: 10px;
-    height: 40px;
- }
- .box-div2{
-    display: flex;
-    align-items: center;
-    justify-content: left;
- }
- .divider{
-    position:absolute;
-    left:50%;
-    top:10%;
-    bottom:10%;
-    border-left:1px solid grey;
-    
-}
- 
