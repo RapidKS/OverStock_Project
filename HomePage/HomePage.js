@@ -11,78 +11,60 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-const slider = document.querySelector(".slider-wrapper");
-const innerslider = document.querySelector("slider-inner");
-
-let drag = false;
-let startx;
-let x;
-slider.addEventListener("mouseenter" , () =>{
-  slider.style.cursor = "grab";
+const menu = document.querySelector(".menu");
+const menuMain = menu.querySelector(".menu-main");
+const goBack = menu.querySelector(".go-back");
+const menuTrigger = document.querySelector(".mobile-menu-trigger");
+const closeMenu = menu.querySelector(".mobile-menu-close");
+let subMenu;
+menuMain.addEventListener("click", (e) =>{
+  if(!menu.classList.contains("active")){
+    return;
+  }
+  if(e.target.closest(".menu-item-has-children")){
+     const hasChildren = e.target.closest(".menu-item-has-children");
+     showSubMenu(hasChildren);
+  }
+});
+goBack.addEventListener("click",() =>{
+   hideSubMenu();
 })
-
-slider.addEventListener("mousemove" , (e) =>{
-  if(!drag) return;
-  e.preventDefault();
-
-  x = e.offsetX;
-
-  innerslider.style.left ='${x=startx}px';
-  check();
+menuTrigger.addEventListener("click",() =>{
+   toggleMenu();
 })
-
-slider.addEventListener("mouseup" , (e) =>{
-  slider.style.cursor="grab";
-  drag=false;
+closeMenu.addEventListener("click",() =>{
+   toggleMenu();
 })
-
-slider.addEventListener("mousedown", (e) =>{
- drag=true;
- startx = e.offsetX-innerslider.offsetLeft;
- slider.style.cursor="grabbing";
+document.querySelector(".menu-overlay").addEventListener("click",() =>{
+  toggleMenu();
 })
+function toggleMenu(){
+  menu.classList.toggle("active");
+  document.querySelector(".menu-overlay").classList.toggle("active");
+}
+function showSubMenu(hasChildren){
+   subMenu = hasChildren.querySelector(".sub-menu");
+   subMenu.classList.add("active");
+   subMenu.style.animation = "slideLeft 0.5s ease forwards";
+   const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
+   menu.querySelector(".current-menu-title").innerHTML=menuTitle;
+   menu.querySelector(".mobile-menu-head").classList.add("active");
+}
 
-slider.addEventListener("touchstart" , (e) =>{
-  drag = true;
-  startx=e.targetTouches[0].clientX - innerslider.offsetLeft;
+function  hideSubMenu(){  
+   subMenu.style.animation = "slideRight 0.5s ease forwards";
+   setTimeout(() =>{
+      subMenu.classList.remove("active");	
+   },300); 
+   menu.querySelector(".current-menu-title").innerHTML="";
+   menu.querySelector(".mobile-menu-head").classList.remove("active");
+}
 
-  check();
-},{
-  passive:true
-})
+window.onresize = function(){
+  if(this.innerWidth >991){
+    if(menu.classList.contains("active")){
+      toggleMenu();
+    }
 
-slider.addEventListener("touchmove" , (e) =>{
-  if(!drag) return;
-  x=e.targetTouches[0].clientX;
-  innerslider.style.left = '${x = startx}px';
-  check();
-},
-{
-  passive: true
-})
-
-prev.addEventListener("click" , () =>{
-  
-  let innersliderleft = innerslider.style.left;
-  innerslider.style.left = parseInt(innersliderleft.replace("px","")) -  265 +"px";
-  check();
-})
-next.addEventListener("click" , () =>{
-  
-  let innersliderleft = innerslider.style.left;
-  innerslider.style.left = parseInt(innersliderleft.replace("px","")) + 265 +"px";
-  check();
-})
-
-const check = () => {
-  let outer = slider.getBoundingClientRect();
-  let inner = slider.getBoundingClientRect();
-
-  if(parent(innerslider.style.left)>0) innerslider.style.left = "-10px";
-
-  if(inner.right < outer.right) innerslider.style.left = '${inner.width = outer.width-10}px'
-
-
+  }
 }
