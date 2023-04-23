@@ -249,8 +249,9 @@ partio_furniture.map(function(elm) {
     addtocartFun(elm);
    });
 });
-  var cartArr = JSON.parse(localStorage.getItem("add-items")) || [];
+  
   function addtocartFun(elm){
+    var cartArr = JSON.parse(localStorage.getItem("add-items")) || [];
     cartArr.push(elm);
    localStorage.setItem("add-items", JSON.stringify(cartArr));
    console.log(cartArr);
