@@ -1,122 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="productpage.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/94814fc2e6.js" crossorigin="anonymous"></script>
-    <style>
-    
-        #parentbox{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        #parentbox > div{
-            margin-bottom: -85px;
-        }
-        
-        #childbox > p+p {
-            width: 100%;
-            font-size: 12px;
-            line-height: 20px;
-            max-height: 62px;
-            overflow: hidden;
-            width: 95%;
-            color: #545658;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-            height: 40px;
-            cursor: pointer;
-           
-        }
-        #childbox > p {
-             color: #2f3337;
-             font-size: 16px;
-             line-height: 17px;
-             font-weight: 700;
-             margin-bottom: 8px;
-             font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-             cursor: pointer;
-        
-        }
-        img{
-            width: 100%;
-            cursor: pointer;
-            height: 60%;
-        }
-        button{
-            border-color: #219452;
-            text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-            font-size: 14px;
-            background: #fafafa;
-            border: 1px solid #d5d7d8;
-            width: 100%;
-            padding: 6px 12px 6px;
-            text-align: center;
-            color: #454545;
-            border-radius: 3px;
-            font-weight: bold;
-            font-size: 16px;
-            font-family: inherit;
-            font-size: inherit;
-            line-height: inherit;
-            background-color: black;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-           
-        }
-        button:hover{
-            background-color: #636161;
-            border-color: #3e3f3e;
-            color: #fff;
-        }
-
-    </style>
 </head>
 <body>
+  <div class="top_Signup_container">
+    <div class="top_coupon_container">
+        <p class="top_coupon_ptag">
+            Sign up to recieve our latest<b> deals </b> and get a <b>10% off coupon </b>.
+        </p>
+        <i class="fa-solid fa-angle-up" style="color: white;"></i>
+    </div>
+    <div class="top_coupon_form_div">
+        <form class="top_banner_form">
+            <input class value placeholder="enter email address">
+            <button type="submit">Sign up</button>
+        </form>
+        <div class="top_banner_form_terms">
+            <a class="top_banner_form_a">Terms & Condition</a>
+            <span class="top_banner_form_span">|</span>
+            <a class="top_banner_form_a">Privacy Policy</a>
+            <span class="top_banner_form_span">|</span>
+            <a class="top_banner_form_a">*You can unsubscribe at any time</a>
+        </div>
+    </div>
+    
+</div>
+<div class = "header_navbar" id="myHeader">
+    <div class="header_divider"></div>
+    <div class="search_header">
+        <a class="overstock_logo" href="file:///E:/Masai%20Project/OverStock_Project/Navbar.html"><img src="https://th.bing.com/th?id=OIP.ZFPmAcPcNvdDz6KUkRvVTAHaBR&w=361&h=62&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="overstock"></a>
+        <div id="header_searchbar" class="header_search">
+            <form class="nav_search">
+                <div class="search_div">
+                    <input placeholder="Search... everything you find ships for free" class="input_search" >
+                </div>
+                <div class="magnifine" style="background-color: red; width: 3%; height: 105%;">
+                    <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                </div>
+            </form>
+        </div>
+        <div class="user-interfrence">
+            <div class="user_int_logo">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="user_int_logo">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="user_int_logo">
+                <i class="fa-solid fa-cart-plus"></i>
+            </div>
+        </div>
+    </div>
+    <div id="top_nav" class="topnav-contain">
+        <div class="topnav-links">
+            <div>
+                <p>Furniture</p>
+            </div>
+            <div>
+                <p>Outdoor</p>
+            </div>
+            <div>
+                <p>Rugs</p>
+            </div>
+            <div>
+                <p>Decor</p>
+            </div>
+            <div>
+                <p>Bedding</p>
+            </div>
+            <div>
+                <p>Home Improvement</p>
+            </div>
+            <div>
+                <p>Kitchen</p>
+            </div>
+            <div>
+                <p>Lighting</p>
+            </div>
+            <div>
+                <p>Kids & Baby</p>
+            </div>
+            <div>
+                <p>Bath</p>
+            </div>
+            <div>
+                <p>More</p>
+            </div>
+            <div class="topnav_links_sign"></div>
+            <div>
+                <p>Ideas</p>
+            </div>
+            <div>
+                <p>Sales & Deals</p>
+            </div>
+        </div>
+    </div>
+
+</div>
   <div id="sort">
     <select id="sort-price">
         <option value="">Sort by Price</option>
         <option value="asc">Price: Low to High</option>
         <option value="desc">Price: High to Low</option>
     </select>
-</div>
+  </div>
 
-    <div>
-        <select id="filter">
-        <option value="">Select color</option>
-        <option value="grey">grey</option>
-        <option value="black">black</option>
-        <option value="beige">beige</option>
-        <option value="brown">brown</option>
-        </select> 
+    <div id="body-child">
+      <div id="filter-parent">
+        <div>
+          <select id="filter">
+          <option value="">Select color</option>
+          <option value="grey">grey</option>
+          <option value="black">black</option>
+          <option value="beige">beige</option>
+          <option value="brown">brown</option>
+          </select> 
+        </div>
+        <div>
+          <select id="filter-material">
+          <option value="">Select Material</option>
+          <option value="Metal">Metal</option>
+          <option value="Wood">Wood</option>
+          <option value="Cane">Cane</option>
+          <option value="Leather">Leather</option>
+          <option value="Fabric">Fabric</option>
+          </select>
+        </div>
+        <div>
+          <select id="filter-brand">
+          <option value="">Select Brand</option>
+          <option value="Christopher Knight Home">Christopher Knight Home</option>
+          <option value="OVIOS">OVIOS</option>
+          <option value="Havenside Home">Havenside Home</option>
+          <option value="SAFAVIEH">SAFAVIEH</option>
+          <option value="Eilaf">Eilaf</option>
+          <option value="Holme">Holme</option>
+          <option value="PATIO">PATIO</option>
+          <option value="Faux Rattan">Faux Rattan</option>
+          </select>
+        </div>
+      </div>
+      <div id="parentbox"></div>
     </div>
-    <div>
-        <select id="filter-material">
-        <option value="">Select Material</option>
-        <option value="Metal">Metal</option>
-        <option value="Wood">Wood</option>
-        <option value="Cane">Cane</option>
-        <option value="Leather">Leather</option>
-        <option value="Fabric">Fabric</option>
-        </select>
-    </div>
-    <div>
-        <select id="filter-brand">
-        <option value="">Select Brand</option>
-        <option value="Christopher Knight Home">Christopher Knight Home</option>
-        <option value="OVIOS">OVIOS</option>
-        <option value="Havenside Home">Havenside Home</option>
-        <option value="SAFAVIEH">SAFAVIEH</option>
-        <option value="Eilaf">Eilaf</option>
-        <option value="Holme">Holme</option>
-        <option value="PATIO">PATIO</option>
-        <option value="Faux Rattan">Faux Rattan</option>
-        </select>
-    </div>
-    <div id="parentbox"></div>
 </body>
 </html>
 <script>
@@ -230,20 +261,28 @@
 
 partio_furniture.map(function(elm) {
     var div1 = document.createElement("div");
+    div1.setAttribute("id", "product");
     var image = document.createElement("img");
     image.setAttribute("src", elm.image);
+    image.setAttribute("id", "image-product");
+    var imagediv = document.createElement("div");
+    imagediv.setAttribute("id", "image-div")
+    imagediv.append(image)
     var div2 = document.createElement("div");
     div2.setAttribute("id", "childbox")
+    var div3 = document.createElement("div");
+    div3.append(div2)
     var p1 = document.createElement("p");
     p1.textContent = elm.price;
+    p1.setAttribute("id", "price-product")
     var p2 = document.createElement("p");
     p2.textContent = elm.details;
-    var div3 = document.createElement("div");
+    p2.setAttribute("id", "product-info")
     var btn = document.createElement("button");
     btn.innerHTML='<i class="fas fa-cart-plus"></i>&nbsp;&nbsp; Add to Cart';
-    div3.append(btn);
-    div2.append(p1, p2, div3);
-    div1.append(image, div2);
+    btn.setAttribute("id", "addtocart")
+    div2.append(p1, p2, btn);
+    div1.append(imagediv, div3);
     document.querySelector("#parentbox").append(div1);
     btn.addEventListener("click", function() {
     addtocartFun(elm);
