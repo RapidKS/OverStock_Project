@@ -1,29 +1,37 @@
 var data = JSON.parse(localStorage.getItem("add-items")) || []
-
-if(data.length != 0){
-    document.querySelector(".empty-cart").textContent = ""
-}
-
-showItems()
-
+showItems(data)
 var totalPrice = 0
-
-function showItems(){
+function showItems(data){
+    document.querySelector("#container").textContent = ""
     data.map(function(Element, index){
         var img = document.createElement("img")
-        img.textContent = Element.image
+        img.setAttribute("src", Element.image)
         img.setAttribute("id", "image")
         var info = document.createElement("p")
-        info.textContent = Element.Details
+        info.textContent = Element.details
         info.setAttribute("id", "info")
         var price = document.createElement("p")
-        price.textContent = Element.Price
+        price.textContent = Element.price
         price.setAttribute("id", "price")
+        var remove = document.createElement("button")
+        remove.textContent = "Remove Item"
+        remove.setAttribute("id", "remove")
+        remove.addEventListener("click", function(){
+            removeItem(Element, index)
+        })
+        var rightdiv = document.createElement("div")
+        rightdiv.setAttribute("id", "item-right-div")
+        rightdiv.append(info, price, remove)
         var items = document.createElement("div")
         items.setAttribute("id", "item")
-        items.append(img, info, price)
+        items.append(img, rightdiv)
         document.querySelector("#container").append(items)
     })
+    function removeItem(Element, index){
+        data.splice(index, 1)
+        localStorage.setItem("add-items", JSON.stringify(data))
+        showItems(data)
+    }
     var c = function(acc, element){
         return acc + element.Price
     }
