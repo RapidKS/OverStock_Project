@@ -11,7 +11,7 @@ function showItems(data){
         info.textContent = Element.details
         info.setAttribute("id", "info")
         var price = document.createElement("p")
-        price.textContent = Element.price
+        price.textContent = Element.MRP
         price.setAttribute("id", "price")
         var remove = document.createElement("button")
         remove.textContent = "Remove Item"
@@ -33,7 +33,7 @@ function showItems(data){
         showItems(data)
     }
     var c = function(acc, element){
-        return acc + element.Price
+        return acc + element.MRP
     }
     var price = data.reduce (c,0)
     document.getElementById("total-cost").textContent = "INR " + price
