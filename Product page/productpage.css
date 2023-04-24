@@ -1,5 +1,5 @@
 body {
-    padding: 0px 50px;
+    padding: 0px 10px;
 }
 
 #sort {
@@ -366,3 +366,79 @@ select > option {
         font-weight: 700;
     }
   }
+  .footer{
+    background-color: #545658;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0;
+}
+.footer-container{
+    display: flex;
+    margin: 40px 50px 60px;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.footer-container-div{
+    width: 100%;
+    margin-bottom: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    
+}
+.footer-col{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   margin: 5px;
+   box-sizing: border-box;
+   
+}
+.footer-col a{
+    text-decoration: none;
+   
+}
+.footer-col div{
+    font-weight: 700;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+}
+.footer-col p{
+    font-size: 12px;
+    width: 100%;
+    color: #fff;
+}
+.bottom-footer{
+    display: flex;
+    background-color: #2f3337;
+    align-content: center;
+}
+.bottom-footer-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+font-size: 12px;
+    width: 100%;
+    color: #fff;
+    
+}
+.bottom-footer-link{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    margin: 10px 30px 10px 10px;
+    width: 450px;
+    
+}
+.bottom-footer-link a{
+    text-decoration: none;
+}
+.bottom-copy{
+    margin: 10px 10px 10px 30px;
+}
+.footer-p{
+    color: #fff;
+}
