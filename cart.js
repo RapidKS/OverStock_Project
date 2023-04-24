@@ -40,3 +40,4 @@ function showItems(data){
     localStorage.setItem("total-cost", JSON.stringify(price))
 }
 
+

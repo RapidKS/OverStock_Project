@@ -227,8 +227,11 @@ body {
     border: 1px solid grey;
     width: 30%;
     font-size: 15px;
-    
+    cursor: pointer;
     margin-top: 10px;
+  }
+  .top > div > button:hover{
+   background-color: #f9fafb;
   }
   .bottom {
         height: 120px;
