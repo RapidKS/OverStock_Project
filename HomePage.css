@@ -488,7 +488,7 @@ margin-bottom: 8px;
 }
 .footer-container{
     display: flex;
-    margin: 40px 105px 60px;
+    margin: 40px 50px 60px;
     width: 100%;
     justify-content: space-between;
 
@@ -1126,6 +1126,23 @@ ul li a:hover::after {
 .got-style-p > p{
     font-size: 10px;
     line-height: 30px;
+}
+.footer-col div {
+    font-weight: 700;
+    width: 100%;
+    font-size: 8px;
+    font-weight: bold;
+}
+.footer-col p {
+    font-size: 7px;
+    width: 100%;
+    color: #fff;
+}
+.footer-container {
+    display: flex;
+    margin: 40px 40px 60px;
+    width: 100%;
+   justify-content: space-evenly;
 }
   }
   .menu-main {
