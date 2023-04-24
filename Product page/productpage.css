@@ -271,3 +271,59 @@ select > option {
     top: 0;
     width: 100%;
   }
+
+  @media only screen and (max-width: 1532px) and (min-width: 1261px) {
+    #parentbox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 1260px) and (min-width: 1115px) {
+    #parentbox {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+
+    #body-child {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #filter-parent > div > select {
+        width: 100%;
+        height: 50px;
+        border-right: 0px #2f3337;
+        border-left: 1px #2f3337;
+        border-top: none;
+        font-size: 14px;
+        font-weight: 700;
+    }
+  }
+
+  @media only screen and (max-width: 1114px) and (min-width: 0px) {
+    #parentbox {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+
+    #body-child {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #filter-parent > div > select {
+        width: 100%;
+        height: 50px;
+        border-right: 0px #2f3337;
+        border-left: 1px #2f3337;
+        border-top: none;
+        font-size: 14px;
+        font-weight: 700;
+    }
+  }
