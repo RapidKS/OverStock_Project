@@ -467,7 +467,7 @@ font-size: 12px;
     align-items: center;
     justify-content: center;
 }
-.user_int_logo > a{
+.user_int_logo > a, .user_int_logo > button{
     margin-bottom: -10px;
 }
 #Accounts , #list , #cart{
