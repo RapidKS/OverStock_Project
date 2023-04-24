@@ -442,3 +442,38 @@ font-size: 12px;
 .footer-p{
     color: #fff;
 }
+.user-interfrence{
+    display: flex;
+    width: 10%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    
+    
+}
+.user-interfrence > div > button{
+    background-color: white;
+    border: none;
+   
+}
+.user-interfrence > div > p{
+    font-size: 10px;
+}
+.user_int_logo{
+    width: 33%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.user_int_logo > a{
+    margin-bottom: -10px;
+}
+#Accounts , #list , #cart{
+    background: transparent;
+    border: none;
+}
+#Accounts > i , #cart > i, #list>i{
+    color: black;
+}
