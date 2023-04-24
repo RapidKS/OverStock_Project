@@ -58,6 +58,7 @@ function signInFun(event) {
   if (found) {
    alert("Sign in Successful");
    window.location.assign("index.html")
+   localStorage.setItem("user" , 1);
   } else {
    document.querySelector("#password-error").style.display = "inline";
   }

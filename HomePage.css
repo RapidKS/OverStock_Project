@@ -155,7 +155,7 @@
     justify-content: center;
 }
 
-#Accounts{
+#Accounts , #list, #cart{
     border: none;
     background: transparent;
 }

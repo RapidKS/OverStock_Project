@@ -1,3 +1,23 @@
+var usersign = localStorage.getItem("user");
+console.log(usersign);
+if(usersign==1){
+  userlogin();
+}
+
+function userlogin(){
+  if(usersign==1){
+    document.getElementById("accname").textContent = "User";
+  }
+  document.getElementById("listdiv").style.display = "flex"
+}
+document.getElementById("list").addEventListener("click" , signout);
+ function signout(){
+ localStorage.setItem("user" , 0);
+ usersign = 0;
+ document.getElementById("accname").textContent = "Accounts"
+ document.getElementById("listdiv").style.display = "none"
+ }
+
 
 window.onscroll = function() {myFunction()};
 
@@ -26,18 +46,8 @@ menuMain.addEventListener("click", (e) =>{
      showSubMenu(hasChildren);
   }
 });
-goBack.addEventListener("click",() =>{
-   hideSubMenu();
-})
-menuTrigger.addEventListener("click",() =>{
-   toggleMenu();
-})
-closeMenu.addEventListener("click",() =>{
-   toggleMenu();
-})
-document.querySelector(".menu-overlay").addEventListener("click",() =>{
-  toggleMenu();
-})
+
+
 function toggleMenu(){
   menu.classList.toggle("active");
   document.querySelector(".menu-overlay").classList.toggle("active");
@@ -69,7 +79,3 @@ window.onresize = function(){
   }
 }
 
-document.getElementById("#Accounts").addEventListener("click" , redirect());
-function redirect(){
-  window.location.assign("signin.html")
-}
