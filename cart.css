@@ -195,7 +195,7 @@ body {
   }
 
   .top {
-    height: 60px;
+    height: 100px;
     width: 300px;
     margin-bottom: 8px;
   }
@@ -204,13 +204,32 @@ body {
     align-items: center;
     cursor: pointer;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     font-size: 18px;
     font-weight: 700;
     transition: margin .2s;
   }
-
+  .top > div{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .top > div > input{
+    width: 50%;
+    height: 10px;
+    font-size: 15px;
+    padding: 16px 17px;
+    margin-top: 10px;
+  }
+  .top > div > button{
+    background: transparent;
+    border: 1px solid grey;
+    width: 30%;
+    font-size: 15px;
+    
+    margin-top: 10px;
+  }
   .bottom {
         height: 120px;
         width: 300px;
